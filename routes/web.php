@@ -19,6 +19,11 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'product'], function() {
     Route::get('/', 'ProductController@index');
+    Route::get('/new', 'ProductController@create');
+    Route::post('/', 'ProductController@save');
+    Route::get('/{id}', 'ProductController@edit');
+    Route::put('/{id}', 'ProductController@update');
+    Route::delete('/{id}', 'ProductController@destroy');
 });
 // Penjelasan: Agar lebih rapi, kita masukkan kedalam group sehingga apapun routing yang berada dalam group tersebut akan memiliki prefix atau awalan /product
 

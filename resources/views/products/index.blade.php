@@ -33,10 +33,30 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @forelse ($products as $product)
                                 <tr>
-                                    <td class="text-center" colspan="6">Tidak ada data</td>
+                                    <!-- MENAMPILKAN VALUE DARI TITLE -->
+                                    <td>{{ $product->title }}</td>
+                                    <td>{{ Str::limit($product->description, 50) }}</td>
+                                    <td>Rp {{ number_format($product->price) }}</td>
+                                    <td>{{ $product->stock }}</td>
+                                    <td>{{ $product->created_at->format('d-m-Y') }}</td>
+                                    <!-- TOMBOL DELETE MENGGUNAKAN METHOD DELETE DALAM ROUTING SEHINGGA KITA MEMASUKKAN TOMBOL TERSEBUT KEDALAM TAG <FORM></FORM> -->
+                                    <td>
+                                        <form action="{{ url('/product/' . $product->id) }}" method="POST">
+                                            <!-- @csrf ADALAH DIRECTIVE UNTUK MEN-GENERATE TOKEN CSRF -->
+                                            @csrf
+                                            <input type="hidden" name="_methoda" value="DELETE" class="form-control">
+                                            <a href="{{ url('/product/' . $product->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                            <button class="btn btn-danger btn-sm">Hapus</button>
+                                        </form>
+                                    </td>
                                 </tr>
-                                
+                                @empty
+                                    <tr>
+                                        <td class="text-center" colspan="6">Tidak ada data</td>
+                                    </tr>
+                            @endforelse
                             </tbody>
                         </table>
                     </div>
