@@ -26,6 +26,14 @@ Route::group(['prefix' => 'product'], function() {
     Route::delete('/{id}', 'ProductController@destroy');
 });
 // Penjelasan: Agar lebih rapi, kita masukkan kedalam group sehingga apapun routing yang berada dalam group tersebut akan memiliki prefix atau awalan /product
+Route::group(['prefix' => 'customer'], function() {
+    Route::get('/', 'CustomerController@index');
+    Route::get('/new', 'CustomerController@create');
+    Route::post('/', 'CustomerController@save');
+    Route::get('/{id}', 'CustomerController@edit');
+    Route::put('/{id}', 'CustomerController@update');
+    Route::delete('/{id}', 'CustomerController@destroy');
+});
 
 Auth::routes();
 

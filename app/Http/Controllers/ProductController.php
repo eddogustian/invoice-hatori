@@ -64,6 +64,6 @@ class ProductController extends Controller
     public function destroy($id){
         $product = Product::find($id);
         $product->delete();
-        return redirect('/product')->with(['success' => '</strong>' .$product->title. '</strong> Dihapus']);
+        return redirect('/product')->with(['success' => '<strong>' .$product->title. '</strong> Dihapus']);
     }
 }

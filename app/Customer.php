@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    //
+    protected $guarded = []; //field apa saja yang tidak boleh (black list)
 }
