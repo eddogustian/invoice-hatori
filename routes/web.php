@@ -34,6 +34,15 @@ Route::group(['prefix' => 'customer'], function() {
     Route::put('/{id}', 'CustomerController@update');
     Route::delete('/{id}', 'CustomerController@destroy');
 });
+Route::group(['prefix' => 'invoice'], function() {
+    //ROUTE UNTUK HALAMAN INVOICE
+    Route::get('/new', 'InvoiceController@create')->name('invoice.create');
+    //ROUTE UNTUK MENG-HANDLE DATA YANG DIKIRIM
+    Route::post('/', 'InvoiceController@save')->name('invoice.store');
+    Route::get('/{id}', 'InvoiceController@edit')->name('invoice.edit');
+    Route::put('/{id}', 'InvoiceController@update')->name('invoice.update');
+    Route::delete('/{id}', 'InvoiceController@deleteProduct')->name('invoice.delete_product');
+});
 
 Auth::routes();
 
