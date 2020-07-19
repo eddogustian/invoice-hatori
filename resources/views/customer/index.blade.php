@@ -46,7 +46,7 @@
                                                 <button class="btn btn-danger btn-sm">Hapus</button>
                                             </form>
                                         </td>
-                                        <!-- KARENA YANG DIBUTUHKAN METHOD POST MAKA KITA MEMASUKKANNYA KEDALAM FORM -->
+                                      
                                         <td>
                                             <form action="{{ route('invoice.store') }}" method="post">
                                                 @csrf
@@ -54,7 +54,7 @@
                                                 <button class="btn btn-primary btn-sm">Buat Invoice</button>
                                             </form>
                                         </td>
-                                        <!-- [... TAMBAHKAN FORM INI ...] -->
+                                       
                                     </tr>
                                     @empty
                                     <tr>
