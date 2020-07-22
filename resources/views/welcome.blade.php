@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image:url('../images/bg-invoice-hatori.jpg');
+                background-image:url('../images/bg-invoice-hatori-m.jpeg');
                 background-attachment:fixed;
                 background-repeat: no-repeat;
                 background-size: cover;
