@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Invoice Hatori</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,10 +12,13 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-image:url('../images/bg-invoice-hatori.jpg');
+                background-attachment:fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: bold;
                 height: 100vh;
                 margin: 0;
             }
@@ -47,9 +50,15 @@
             .title {
                 font-size: 84px;
             }
-
+            .title p {
+                margin: 0;
+                padding: 0;
+                line-height: 0;
+                font-size: 25px;
+                text-align: right;
+            }
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -81,18 +90,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    Invoice Hatori
+                    <p>by eddogustian</p>
                 </div>
             </div>
         </div>
